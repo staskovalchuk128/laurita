@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    </head>
+    <body>
+        <button id="si" onmouseover="movebtn()" style="position: relative;">Test</button>
+
+        <script>
+            function randomPosition(element) {
+                let x = Math.floor(Math.random() * (window.innerWidth - element.offsetWidth));
+                let y = Math.floor(Math.random() * (window.innerHeight - element.offsetHeight));
+
+                return { x, y };
+            }
+
+            function movebtn(){{
+            // Example
+                 let pos = randomPosition(document.getElementById('si'));
+                $('#si').animate({left: pos.x,top: pos.y}, 500); // 5000ms = 5 seconds
+            }}
+
+
+
+        </script>
+    </body>
+</html>
